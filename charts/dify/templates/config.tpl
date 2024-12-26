@@ -128,11 +128,11 @@ DB_DATABASE: {{ .Values.externalPostgres.dbName }}
 {{- else if .Values.postgresql.enabled }}
   {{ with .Values.postgresql.global.postgresql.auth }}
   {{- if empty .username }}
-# DB_USERNAME: postgres
-# DB_PASSWORD: {{ .postgresPassword }}
+DB_USERNAME: postgres
+DB_PASSWORD: {{ .postgresPassword }}
   {{- else }}
-# DB_USERNAME: {{ .username }}
-# DB_PASSWORD: {{ .password }}
+DB_USERNAME: {{ .username }}
+DB_PASSWORD: {{ .password }}
   {{- end }}
   {{- end }}
   {{- if eq .Values.postgresql.architecture "replication" }}
