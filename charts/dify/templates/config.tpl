@@ -395,6 +395,10 @@ server {
       proxy_pass http://{{ template "dify.web.fullname" .}}:{{ .Values.web.service.port }};
       include proxy.conf;
     }
+
+    location /healthz {
+      return 200;
+    }
 }
 {{- end }}
 
