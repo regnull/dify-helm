@@ -153,7 +153,7 @@ api:
     files: ""
   mail:
     # default email sender from email address, if not not given specific address
-    defaultSender: 'YOUR EMAIL FROM (eg: no-reply <no-reply@dify.ai>)'
+    defaultSender: 'dify@butterflies.ai'
     # Mail type, supported values are `smtp`, `resend` https://docs.dify.ai/getting-started/install-self-hosted/environments#mail-related-configuration
     type: "resend"
     resend:
