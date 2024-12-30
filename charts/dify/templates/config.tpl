@@ -396,6 +396,11 @@ server {
       include proxy.conf;
     }
 
+    location /favicon.ico {
+      proxy_pass http://{{ template "dify.web.fullname" .}}:{{ .Values.web.service.port }};
+      include proxy.conf;
+    }
+
     location /healthz {
       return 200;
     }
